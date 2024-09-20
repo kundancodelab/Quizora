@@ -5,7 +5,7 @@ SwiftQuiz is a fun and interactive quiz app developed using Swift for iOS. The a
 
 
 
-
+# Feature
 1. 30-Second Timer: A countdown timer gives the user 30 seconds to answer each question.
 2. Multiple-Choice Questions: Each question comes with four possible answers, only one of which is correct.
 3. Real-time Feedback: Users receive immediate feedback based on their answer selection.
