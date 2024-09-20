@@ -18,7 +18,7 @@ SwiftQuiz is a fun and interactive quiz app developed using Swift for iOS. The a
 3. The user selects one of the four answer options.
 4. After the selection, the user gets feedback on whether the answer is correct or incorrect.
 5. The quiz progresses to the next question, and the process repeats.
-
+<br>
 
 ![Screenshot 2024-09-20 at 1 24 55 PM](https://github.com/user-attachments/assets/3c4b4821-9b9f-4778-8ec1-4ca9ae46f6b0)
 
