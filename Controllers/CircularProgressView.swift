@@ -9,7 +9,7 @@ class CircularProgressView: UIView {
     private var duration: TimeInterval = 0
     private var elapsedTime: TimeInterval = 0
     
-    var progressColor = UIColor(hex: "#004643") {  
+    var progressColor = UIColor(hex: "#004643") {
         didSet {
             progressLayer.strokeColor = progressColor.cgColor
         }
@@ -37,6 +37,7 @@ class CircularProgressView: UIView {
         let center = CGPoint(x: frame.size.width / 2, y: frame.size.height / 2)
         let circularPath = UIBezierPath(arcCenter: center, radius: frame.size.width / 2, startAngle: -.pi / 2, endAngle: 3 * .pi / 2, clockwise: true)
         
+        // Track layer
         trackLayer.path = circularPath.cgPath
         trackLayer.fillColor = UIColor.clear.cgColor
         trackLayer.strokeColor = trackColor.cgColor
@@ -45,12 +46,13 @@ class CircularProgressView: UIView {
         trackLayer.frame = bounds
         layer.addSublayer(trackLayer)
         
+        // Progress layer
         progressLayer.path = circularPath.cgPath
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.strokeColor = progressColor.cgColor
         progressLayer.lineWidth = 10.0
         progressLayer.lineCap = .round
-        progressLayer.strokeEnd = 0
+        progressLayer.strokeEnd = 1.0 // Start from full progress
         progressLayer.frame = bounds
         layer.addSublayer(progressLayer)
     }
@@ -63,42 +65,71 @@ class CircularProgressView: UIView {
         addSubview(countdownLabel)
     }
     
-    func setProgressWithAnimation(duration: TimeInterval, value: Float) {
+    func setProgressWithAnimation(duration: TimeInterval) {
+        // Remove any existing animations
+        progressLayer.removeAllAnimations()
+        
+        // Reset the progress layer
+        progressLayer.strokeEnd = 1.0 // Start from full progress
+        
+        // Create the animation
         let animation = CABasicAnimation(keyPath: "strokeEnd")
         animation.duration = duration
-        animation.fromValue = 0
-        animation.toValue = value
-        animation.timingFunction = CAMediaTimingFunction(name: .easeInEaseOut)
-        progressLayer.strokeEnd = CGFloat(value)
-        progressLayer.add(animation, forKey: "animateprogress")
+        animation.fromValue = 1.0 // Start from full progress
+        animation.toValue = 0.0 // Shrink to 0
+        animation.timingFunction = CAMediaTimingFunction(name: .linear)
         
-        // Update label
-        countdownLabel.text = "\(Int(value * 100))%"
+        // Use CATransaction to update strokeEnd after the animation completes
+        CATransaction.begin()
+        CATransaction.setCompletionBlock {
+            self.progressLayer.strokeEnd = 0.0 // Ensure final value is set
+        }
+        progressLayer.add(animation, forKey: "animateprogress")
+        CATransaction.commit()
     }
     
     func startCountdown(duration: TimeInterval) {
+        // Stop any existing timer and animation
+        stopAnimation()
+        
+        // Set the duration and reset elapsed time
         self.duration = duration
         self.elapsedTime = 0
-        self.countdownLabel.text = "\(Int(duration))"
-        self.progressLayer.strokeEnd = 1.0
+        countdownLabel.text = "\(Int(duration))"
         
-        timer?.invalidate()
+        // Start the animation
+        setProgressWithAnimation(duration: duration)
+        
+        // Start the timer
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] timer in
             guard let self = self else { return }
             self.elapsedTime += 1
-            let remainingTime = self.duration - self.elapsedTime
-            self.countdownLabel.text = "\(Int(remainingTime))"
-            let progressValue = Float(remainingTime / self.duration)
-            self.progressLayer.strokeEnd = CGFloat(progressValue)
+            let remainingTime = Int(duration) - Int(self.elapsedTime)
+            self.countdownLabel.text = "\(remainingTime)"
             
             if remainingTime <= 0 {
                 timer.invalidate()
+                self.timer = nil
+                self.countdownLabel.text = "Time's up!"
             }
         }
     }
+    
+    func stopAnimation() {
+        // Stop the timer
+        timer?.invalidate()
+        timer = nil
+        
+        // Remove the current animation
+        progressLayer.removeAllAnimations()
+        
+        // Reset the progress bar to full progress
+        progressLayer.strokeEnd = 1.0
+        
+        // Update the label to show the full duration
+        countdownLabel.text = "\(Int(duration))"
+    }
 }
-import UIKit
-
 extension UIColor {
     // Create a UIColor from a hex string
     convenience init(hex: String) {
