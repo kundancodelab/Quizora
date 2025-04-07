@@ -6,7 +6,7 @@ target 'QuizApp' do
 
   # Pods for QuizApp
 
-  pod 'DGCharts'  
+ # pod 'DGCharts'  
 
   target 'QuizAppTests' do
     inherit! :search_paths
