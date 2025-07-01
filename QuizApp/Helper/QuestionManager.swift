@@ -6,6 +6,10 @@
 //
 
 import Foundation
+import FirebaseStorage
+import FirebaseFirestore
+
+
 enum DataError: Error {
     case invalidURL
     case invalidResponse
@@ -16,6 +20,10 @@ typealias handler = (Result<[questionModel], DataError>) -> Void
 
 class APIManager {
     static let shared = APIManager()
+    // MARK: Base url Live...
+    let baseURL = ""
+    // MARK: Base url Local...
+   // let baseURL = ""
     private init() {}
     
     func fetchQuestionsData(completion: @escaping handler) {
@@ -44,6 +52,26 @@ class APIManager {
             }
         }.resume()
     }
+    
+    func fetchQuestions(forLanguage language: String, completion: @escaping ([questionModel]) -> Void) {
+        let db = Firestore.firestore()
+        db.collection("quizzes").document(language).collection("questions").getDocuments { snapshot, error in
+            var questions: [questionModel] = []
+            if let documents = snapshot?.documents {
+                for doc in documents {
+                    let data = doc.data()
+                    if let questionText = data["question"] as? String,
+                       let options = data["options"] as? [String],
+                       let correct = data["correctAnswer"] as? String {
+                        let q = questionModel(question: questionText, options: options, answer: correct, explanation: nil)
+                        questions.append(q)
+                    }
+                }
+                completion(questions)
+            }
+        }
+    }
+
 }
 
 
