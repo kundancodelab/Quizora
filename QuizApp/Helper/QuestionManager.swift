@@ -4,7 +4,7 @@
 //
 //  Created by User on 07/04/25.
 //
-// this is project where we are learing about solving merge conflicts. 
+// this is project where we are learing about solving merge conflicts.
 import Foundation
 import FirebaseStorage
 import FirebaseFirestore
