@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5EE4171E3537DA8D4F0EFCFF /* Pods_QuizApp_QuizAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32700A0481CBEE964D104E39 /* Pods_QuizApp_QuizAppUITests.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		9659F9215465CC8F504F027C /* Pods_QuizApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 105714BCADC19B0E66165AA2 /* Pods_QuizApp.framework */; };
 		B2000C87909A8E874B00446A /* Pods_QuizAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45E6B991EF8FF26E2807D68 /* Pods_QuizAppTests.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		BD2D57D62C1C6480003E76A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57D52C1C6480003E76A4 /* AppDelegate.swift */; };
 		BD2D57D82C1C6480003E76A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57D72C1C6480003E76A4 /* SceneDelegate.swift */; };
@@ -18,12 +17,16 @@
 		BD2D57ED2C1C6482003E76A4 /* QuizAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57EC2C1C6482003E76A4 /* QuizAppTests.swift */; };
 		BD2D57F72C1C6482003E76A4 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57F62C1C6482003E76A4 /* QuizAppUITests.swift */; };
 		BD2D57F92C1C6482003E76A4 /* QuizAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57F82C1C6482003E76A4 /* QuizAppUITestsLaunchTests.swift */; };
-		BDF84D312C63B3560079E84A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF84D302C63B3560079E84A /* HomeViewController.swift */; };
 		BDF84D352C63EDE40079E84A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF84D342C63EDE40079E84A /* CircularProgressView.swift */; };
-		BDF84D372C63EE2F0079E84A /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF84D362C63EE2F0079E84A /* QuizViewController.swift */; };
-		CE2C874A2D4D28CA002B7CA9 /* SpeakQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2C87492D4D28CA002B7CA9 /* SpeakQuestionViewController.swift */; };
-		CE6229542D678A3D00C53BFC /* ScoreTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6229532D678A3D00C53BFC /* ScoreTableViewController.swift */; };
-		CEE211242DA308590062599E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE211232DA308590062599E /* APIManager.swift */; };
+		CECCE7972E62768C0042651B /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCE7942E62768C0042651B /* QuizVC.swift */; };
+		CECCE7982E62768C0042651B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCE7922E62768C0042651B /* HomeVC.swift */; };
+		CECCE7992E62768C0042651B /* SpeakQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCE7952E62768C0042651B /* SpeakQuestionVC.swift */; };
+		CECCE79A2E62768C0042651B /* LeaderbaordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCE7932E62768C0042651B /* LeaderbaordVC.swift */; };
+		CECCE79E2E6276E50042651B /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCE79D2E6276E50042651B /* QuestionManager.swift */; };
+		CECCE7A12E6277360042651B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CECCE7A02E6277360042651B /* FirebaseAuth */; };
+		CECCE7A32E6277360042651B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = CECCE7A22E6277360042651B /* FirebaseDatabase */; };
+		CECCE7A52E6277360042651B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CECCE7A42E6277360042651B /* FirebaseFirestore */; };
+		CECCE7A82E6277BD0042651B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = CECCE7A72E6277BD0042651B /* FirebaseStorage */; };
 		CEE211262DA308C90062599E /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE211252DA308C90062599E /* APIConstant.swift */; };
 		CEE2112B2DA309690062599E /* questionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2112A2DA309690062599E /* questionModel.swift */; };
 		CEE2112D2DA30A480062599E /* QuestionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2112C2DA30A480062599E /* QuestionVM.swift */; };
@@ -81,13 +84,14 @@
 		BD2D57F22C1C6482003E76A4 /* QuizAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuizAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2D57F62C1C6482003E76A4 /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		BD2D57F82C1C6482003E76A4 /* QuizAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		BDF84D302C63B3560079E84A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BDF84D342C63EDE40079E84A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
-		BDF84D362C63EE2F0079E84A /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
-		CE2C87492D4D28CA002B7CA9 /* SpeakQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakQuestionViewController.swift; sourceTree = "<group>"; };
-		CE6229532D678A3D00C53BFC /* ScoreTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreTableViewController.swift; sourceTree = "<group>"; };
 		CE885AF02D67A57200C6081C /* DGCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DGCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEE211232DA308590062599E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CECCE7922E62768C0042651B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		CECCE7932E62768C0042651B /* LeaderbaordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderbaordVC.swift; sourceTree = "<group>"; };
+		CECCE7942E62768C0042651B /* QuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizVC.swift; sourceTree = "<group>"; };
+		CECCE7952E62768C0042651B /* SpeakQuestionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakQuestionVC.swift; sourceTree = "<group>"; };
+		CECCE79D2E6276E50042651B /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		CECCE7A62E62774D0042651B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CEE211252DA308C90062599E /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
 		CEE2112A2DA309690062599E /* questionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionModel.swift; sourceTree = "<group>"; };
 		CEE2112C2DA30A480062599E /* QuestionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionVM.swift; sourceTree = "<group>"; };
@@ -103,8 +107,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CECCE7A32E6277360042651B /* FirebaseDatabase in Frameworks */,
+				CECCE7A52E6277360042651B /* FirebaseFirestore in Frameworks */,
 				CEE77DA42DA396F80000D36F /* MBProgressHUD in Frameworks */,
-				9659F9215465CC8F504F027C /* Pods_QuizApp.framework in Frameworks */,
+				CECCE7A82E6277BD0042651B /* FirebaseStorage in Frameworks */,
+				CECCE7A12E6277360042651B /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +191,7 @@
 				CEE211222DA307780062599E /* Storyboard */,
 				CEE211212DA307700062599E /* Resources */,
 				BD2D57E32C1C6482003E76A4 /* Info.plist */,
+				CECCE7A62E62774D0042651B /* GoogleService-Info.plist */,
 			);
 			path = QuizApp;
 			sourceTree = "<group>";
@@ -214,13 +222,13 @@
 			path = Application;
 			sourceTree = "<group>";
 		};
-		BDF84D2F2C63B3400079E84A /* Controllers */ = {
+		CECCE7962E62768C0042651B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BDF84D302C63B3560079E84A /* HomeViewController.swift */,
-				BDF84D362C63EE2F0079E84A /* QuizViewController.swift */,
-				CE2C87492D4D28CA002B7CA9 /* SpeakQuestionViewController.swift */,
-				CE6229532D678A3D00C53BFC /* ScoreTableViewController.swift */,
+				CECCE7922E62768C0042651B /* HomeVC.swift */,
+				CECCE7932E62768C0042651B /* LeaderbaordVC.swift */,
+				CECCE7942E62768C0042651B /* QuizVC.swift */,
+				CECCE7952E62768C0042651B /* SpeakQuestionVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,7 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				BDF84D342C63EDE40079E84A /* CircularProgressView.swift */,
-				CEE211232DA308590062599E /* APIManager.swift */,
+				CECCE79D2E6276E50042651B /* QuestionManager.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -288,7 +296,7 @@
 		CEE211292DA309440062599E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BDF84D2F2C63B3400079E84A /* Controllers */,
+				CECCE7962E62768C0042651B /* Controllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -396,6 +404,7 @@
 			mainGroup = BD2D57C92C1C6480003E76A4;
 			packageReferences = (
 				CEE77DA22DA396F80000D36F /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				CECCE79F2E6277360042651B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = BD2D57D32C1C6480003E76A4 /* Products */;
 			projectDirPath = "";
@@ -509,19 +518,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEE211242DA308590062599E /* APIManager.swift in Sources */,
-				BDF84D312C63B3560079E84A /* HomeViewController.swift in Sources */,
 				CEE211262DA308C90062599E /* APIConstant.swift in Sources */,
-				BDF84D372C63EE2F0079E84A /* QuizViewController.swift in Sources */,
+				CECCE79E2E6276E50042651B /* QuestionManager.swift in Sources */,
 				BD2D57D62C1C6480003E76A4 /* AppDelegate.swift in Sources */,
 				CEE2112B2DA309690062599E /* questionModel.swift in Sources */,
 				CEE77DD62DA39ABD0000D36F /* String+Extension.swift in Sources */,
+				CECCE7972E62768C0042651B /* QuizVC.swift in Sources */,
+				CECCE7982E62768C0042651B /* HomeVC.swift in Sources */,
+				CECCE7992E62768C0042651B /* SpeakQuestionVC.swift in Sources */,
+				CECCE79A2E62768C0042651B /* LeaderbaordVC.swift in Sources */,
 				BD2D57D82C1C6480003E76A4 /* SceneDelegate.swift in Sources */,
-				CE2C874A2D4D28CA002B7CA9 /* SpeakQuestionViewController.swift in Sources */,
 				CEE2112D2DA30A480062599E /* QuestionVM.swift in Sources */,
 				CEE77DD42DA397E00000D36F /* UIViewController+LoadingExtension.swift in Sources */,
 				BDF84D352C63EDE40079E84A /* CircularProgressView.swift in Sources */,
-				CE6229542D678A3D00C53BFC /* ScoreTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -868,6 +877,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CECCE79F2E6277360042651B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
 		CEE77DA22DA396F80000D36F /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jdg/MBProgressHUD.git";
@@ -879,6 +896,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CECCE7A02E6277360042651B /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECCE79F2E6277360042651B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CECCE7A22E6277360042651B /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECCE79F2E6277360042651B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		CECCE7A42E6277360042651B /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECCE79F2E6277360042651B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CECCE7A72E6277BD0042651B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CECCE79F2E6277360042651B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		CEE77DA32DA396F80000D36F /* MBProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEE77DA22DA396F80000D36F /* XCRemoteSwiftPackageReference "MBProgressHUD" */;

@@ -63,7 +63,7 @@ class APIManager {
                     if let questionText = data["question"] as? String,
                        let options = data["options"] as? [String],
                        let correct = data["correctAnswer"] as? String {
-                        let q = questionModel(question: questionText, options: options, answer: correct, explanation: nil)
+                        let q = questionModel(question: questionText, options: options, answer: correct, explanation: "N/A")
                         questions.append(q)
                     }
                 }
