@@ -1,0 +1,19 @@
+# Create the .gitignore file
+cat > .gitignore << EOF
+# macOS
+.DS_Store
+
+# Xcode
+*.xcuserstate
+xcuserdata/
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcshareddata/
+UserInterfaceState.xcuserstate
+
+# Swift
+.build/
+*.swiftpm
+Packages/
+.swiftpm/
+EOF
