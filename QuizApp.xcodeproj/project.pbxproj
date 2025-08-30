@@ -183,8 +183,9 @@
 		BD2D57D42C1C6480003E76A4 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				CEBAA1FE2E628B1B00C76FAB /* Networking */,
 				CEE2112E2DA30E4F0062599E /* Extension */,
-				BDF84D2D2C63B27A0079E84A /* Application */,
+				BDF84D2D2C63B27A0079E84A /* Delegates */,
 				CEE211202DA307660062599E /* Constant */,
 				CEE2111F2DA3075E0062599E /* Helper */,
 				CEE2111E2DA307570062599E /* Screens */,
@@ -213,13 +214,20 @@
 			path = QuizAppUITests;
 			sourceTree = "<group>";
 		};
-		BDF84D2D2C63B27A0079E84A /* Application */ = {
+		BDF84D2D2C63B27A0079E84A /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
 				BD2D57D52C1C6480003E76A4 /* AppDelegate.swift */,
 				BD2D57D72C1C6480003E76A4 /* SceneDelegate.swift */,
 			);
-			path = Application;
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CEBAA1FE2E628B1B00C76FAB /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		CECCE7962E62768C0042651B /* Controllers */ = {
