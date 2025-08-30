@@ -3,11 +3,8 @@
 
 # Xcode user data
 *.xcuserstate
-xcuserdata/
+**/xcuserdata/
 DerivedData/
 
 # Swift Package Manager
 .build/
-# Xcode workspace user data
-*.xcuserstate
-**/xcuserdata/
