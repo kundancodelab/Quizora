@@ -18,6 +18,21 @@
 		BD2D57F72C1C6482003E76A4 /* QuizAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57F62C1C6482003E76A4 /* QuizAppUITests.swift */; };
 		BD2D57F92C1C6482003E76A4 /* QuizAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57F82C1C6482003E76A4 /* QuizAppUITestsLaunchTests.swift */; };
 		BDF84D352C63EDE40079E84A /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF84D342C63EDE40079E84A /* CircularProgressView.swift */; };
+		CE090EA52F26656E00B45930 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE090EA42F26656E00B45930 /* Auth.storyboard */; };
+		CE090EAD2F26667700B45930 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE090EAC2F26667700B45930 /* Colors.xcassets */; };
+		CE090EB02F2666D100B45930 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090EAF2F2666D100B45930 /* Utils.swift */; };
+		CE090EB22F2667E200B45930 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090EB12F2667E100B45930 /* Color+Extension.swift */; };
+		CE090EB42F26AD1000B45930 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090EB32F26AD1000B45930 /* LoginVC.swift */; };
+		CE090EB62F26AD3000B45930 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090EB52F26AD3000B45930 /* AuthViewModel.swift */; };
+		CE090F032F26B30400B45930 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090EFF2F26B30400B45930 /* AuthService.swift */; };
+		CE090F042F26B30400B45930 /* AuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090F002F26B30400B45930 /* AuthServiceProtocol.swift */; };
+		CE090F052F26B30400B45930 /* GoogleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090F022F26B30400B45930 /* GoogleAuthService.swift */; };
+		CE090F062F26B30400B45930 /* EmailAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090F012F26B30400B45930 /* EmailAuthService.swift */; };
+		CE090F072F26B30400B45930 /* AppleAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090EFD2F26B30400B45930 /* AppleAuthService.swift */; };
+		CE090F082F26B30400B45930 /* AuthHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090EFE2F26B30400B45930 /* AuthHelper.swift */; };
+		CE090F0A2F26B34D00B45930 /* UserServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090F092F26B34D00B45930 /* UserServiceProtocol.swift */; };
+		CE090F0C2F26B39B00B45930 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090F0B2F26B39B00B45930 /* Errors.swift */; };
+		CE090F0E2F26B4A700B45930 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE090F0D2F26B4A700B45930 /* Validator.swift */; };
 		CECCE7972E62768C0042651B /* QuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCE7942E62768C0042651B /* QuizVC.swift */; };
 		CECCE7982E62768C0042651B /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCE7922E62768C0042651B /* HomeVC.swift */; };
 		CECCE7992E62768C0042651B /* SpeakQuestionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCE7952E62768C0042651B /* SpeakQuestionVC.swift */; };
@@ -85,6 +100,21 @@
 		BD2D57F62C1C6482003E76A4 /* QuizAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITests.swift; sourceTree = "<group>"; };
 		BD2D57F82C1C6482003E76A4 /* QuizAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		BDF84D342C63EDE40079E84A /* CircularProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		CE090EA42F26656E00B45930 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		CE090EAC2F26667700B45930 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		CE090EAF2F2666D100B45930 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		CE090EB12F2667E100B45930 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		CE090EB32F26AD1000B45930 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		CE090EB52F26AD3000B45930 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		CE090EFD2F26B30400B45930 /* AppleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleAuthService.swift; sourceTree = "<group>"; };
+		CE090EFE2F26B30400B45930 /* AuthHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHelper.swift; sourceTree = "<group>"; };
+		CE090EFF2F26B30400B45930 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		CE090F002F26B30400B45930 /* AuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthServiceProtocol.swift; sourceTree = "<group>"; };
+		CE090F012F26B30400B45930 /* EmailAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailAuthService.swift; sourceTree = "<group>"; };
+		CE090F022F26B30400B45930 /* GoogleAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthService.swift; sourceTree = "<group>"; };
+		CE090F092F26B34D00B45930 /* UserServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceProtocol.swift; sourceTree = "<group>"; };
+		CE090F0B2F26B39B00B45930 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
+		CE090F0D2F26B4A700B45930 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		CE885AF02D67A57200C6081C /* DGCharts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DGCharts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CECCE7922E62768C0042651B /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		CECCE7932E62768C0042651B /* LeaderbaordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderbaordVC.swift; sourceTree = "<group>"; };
@@ -183,7 +213,7 @@
 		BD2D57D42C1C6480003E76A4 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
-				CEBAA1FE2E628B1B00C76FAB /* Networking */,
+				CE090EAE2F2666C900B45930 /* Utils */,
 				CEE2112E2DA30E4F0062599E /* Extension */,
 				BDF84D2D2C63B27A0079E84A /* Delegates */,
 				CEE211202DA307660062599E /* Constant */,
@@ -223,11 +253,84 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		CEBAA1FE2E628B1B00C76FAB /* Networking */ = {
+		CE090EA62F26659600B45930 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CE090EB72F26AFDE00B45930 /* Repository */,
+				CE090EAA2F2665B300B45930 /* Auth+Router+Flow */,
+				CE090EA92F2665A900B45930 /* ViewModel */,
+				CE090EA82F2665A000B45930 /* Views */,
+				CE090EA72F26659B00B45930 /* Model */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CE090EA72F26659B00B45930 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Networking;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE090EA82F2665A000B45930 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE090EB32F26AD1000B45930 /* LoginVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE090EA92F2665A900B45930 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE090EB52F26AD3000B45930 /* AuthViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CE090EAA2F2665B300B45930 /* Auth+Router+Flow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Auth+Router+Flow";
+			sourceTree = "<group>";
+		};
+		CE090EAB2F2665CE00B45930 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE090EFD2F26B30400B45930 /* AppleAuthService.swift */,
+				CE090EFF2F26B30400B45930 /* AuthService.swift */,
+				CE090F012F26B30400B45930 /* EmailAuthService.swift */,
+				CE090F022F26B30400B45930 /* GoogleAuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE090EAE2F2666C900B45930 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CE090EAF2F2666D100B45930 /* Utils.swift */,
+				CE090F0B2F26B39B00B45930 /* Errors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CE090EB72F26AFDE00B45930 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CE090EB82F26B03000B45930 /* AuthPr */,
+				CE090EAB2F2665CE00B45930 /* Services */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CE090EB82F26B03000B45930 /* AuthPr */ = {
+			isa = PBXGroup;
+			children = (
+				CE090F092F26B34D00B45930 /* UserServiceProtocol.swift */,
+				CE090F002F26B30400B45930 /* AuthServiceProtocol.swift */,
+			);
+			path = AuthPr;
 			sourceTree = "<group>";
 		};
 		CECCE7962E62768C0042651B /* Controllers */ = {
@@ -244,6 +347,7 @@
 		CEE2111E2DA307570062599E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				CE090EA62F26659600B45930 /* Auth */,
 				CEE211292DA309440062599E /* View */,
 				CEE211282DA3093D0062599E /* ViewModel */,
 				CEE211272DA309380062599E /* Model */,
@@ -256,6 +360,8 @@
 			children = (
 				BDF84D342C63EDE40079E84A /* CircularProgressView.swift */,
 				CECCE79D2E6276E50042651B /* QuestionManager.swift */,
+				CE090EFE2F26B30400B45930 /* AuthHelper.swift */,
+				CE090F0D2F26B4A700B45930 /* Validator.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -272,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				BD2D57DE2C1C6482003E76A4 /* Assets.xcassets */,
+				CE090EAC2F26667700B45930 /* Colors.xcassets */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -281,6 +388,7 @@
 			children = (
 				BD2D57DB2C1C6480003E76A4 /* Main.storyboard */,
 				BD2D57E02C1C6482003E76A4 /* LaunchScreen.storyboard */,
+				CE090EA42F26656E00B45930 /* Auth.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -314,6 +422,7 @@
 			children = (
 				CEE77DD32DA397E00000D36F /* UIViewController+LoadingExtension.swift */,
 				CEE77DD52DA39ABD0000D36F /* String+Extension.swift */,
+				CE090EB12F2667E100B45930 /* Color+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -430,6 +539,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE090EAD2F26667700B45930 /* Colors.xcassets in Resources */,
+				CE090EA52F26656E00B45930 /* Auth.storyboard in Resources */,
 				BD2D57E22C1C6482003E76A4 /* LaunchScreen.storyboard in Resources */,
 				BD2D57DF2C1C6482003E76A4 /* Assets.xcassets in Resources */,
 				BD2D57DD2C1C6480003E76A4 /* Main.storyboard in Resources */,
@@ -527,13 +638,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE211262DA308C90062599E /* APIConstant.swift in Sources */,
+				CE090EB22F2667E200B45930 /* Color+Extension.swift in Sources */,
 				CECCE79E2E6276E50042651B /* QuestionManager.swift in Sources */,
+				CE090F032F26B30400B45930 /* AuthService.swift in Sources */,
+				CE090F0E2F26B4A700B45930 /* Validator.swift in Sources */,
+				CE090F042F26B30400B45930 /* AuthServiceProtocol.swift in Sources */,
+				CE090F052F26B30400B45930 /* GoogleAuthService.swift in Sources */,
+				CE090F062F26B30400B45930 /* EmailAuthService.swift in Sources */,
+				CE090F072F26B30400B45930 /* AppleAuthService.swift in Sources */,
+				CE090F082F26B30400B45930 /* AuthHelper.swift in Sources */,
 				BD2D57D62C1C6480003E76A4 /* AppDelegate.swift in Sources */,
+				CE090EB02F2666D100B45930 /* Utils.swift in Sources */,
 				CEE2112B2DA309690062599E /* questionModel.swift in Sources */,
 				CEE77DD62DA39ABD0000D36F /* String+Extension.swift in Sources */,
+				CE090EB62F26AD3000B45930 /* AuthViewModel.swift in Sources */,
+				CE090F0A2F26B34D00B45930 /* UserServiceProtocol.swift in Sources */,
 				CECCE7972E62768C0042651B /* QuizVC.swift in Sources */,
+				CE090F0C2F26B39B00B45930 /* Errors.swift in Sources */,
 				CECCE7982E62768C0042651B /* HomeVC.swift in Sources */,
 				CECCE7992E62768C0042651B /* SpeakQuestionVC.swift in Sources */,
+				CE090EB42F26AD1000B45930 /* LoginVC.swift in Sources */,
 				CECCE79A2E62768C0042651B /* LeaderbaordVC.swift in Sources */,
 				BD2D57D82C1C6480003E76A4 /* SceneDelegate.swift in Sources */,
 				CEE2112D2DA30A480062599E /* QuestionVM.swift in Sources */,
