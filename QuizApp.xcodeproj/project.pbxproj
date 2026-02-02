@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		5EE4171E3537DA8D4F0EFCFF /* Pods_QuizApp_QuizAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32700A0481CBEE964D104E39 /* Pods_QuizApp_QuizAppUITests.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		B2000C87909A8E874B00446A /* Pods_QuizAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45E6B991EF8FF26E2807D68 /* Pods_QuizAppTests.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		B5E107DA2F312EFE00700E2A /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E107D92F312EFE00700E2A /* AuthModels.swift */; };
+		B5E107DC2F312F0900700E2A /* AuthRouterFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E107DB2F312F0900700E2A /* AuthRouterFlow.swift */; };
+		B5E107E02F312F5800700E2A /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E107DF2F312F5800700E2A /* OnboardingVC.swift */; };
 		BD2D57D62C1C6480003E76A4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57D52C1C6480003E76A4 /* AppDelegate.swift */; };
 		BD2D57D82C1C6480003E76A4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D57D72C1C6480003E76A4 /* SceneDelegate.swift */; };
 		BD2D57DD2C1C6480003E76A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD2D57DB2C1C6480003E76A4 /* Main.storyboard */; };
@@ -87,6 +90,9 @@
 		4544CEDEC46356FB8E78F4C8 /* Pods-QuizApp-QuizAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp-QuizAppUITests.release.xcconfig"; path = "Target Support Files/Pods-QuizApp-QuizAppUITests/Pods-QuizApp-QuizAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6CEDD19B08DC395B7D8BAE6A /* Pods-QuizApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp.debug.xcconfig"; path = "Target Support Files/Pods-QuizApp/Pods-QuizApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7A81686533933E38FFF5D15B /* Pods-QuizApp-QuizAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuizApp-QuizAppUITests.debug.xcconfig"; path = "Target Support Files/Pods-QuizApp-QuizAppUITests/Pods-QuizApp-QuizAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5E107D92F312EFE00700E2A /* AuthModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModels.swift; sourceTree = "<group>"; };
+		B5E107DB2F312F0900700E2A /* AuthRouterFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouterFlow.swift; sourceTree = "<group>"; };
+		B5E107DF2F312F5800700E2A /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		BD2D57D22C1C6480003E76A4 /* QuizApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuizApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD2D57D52C1C6480003E76A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD2D57D72C1C6480003E76A4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -188,6 +194,38 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B5E107D72F312EDC00700E2A /* Auth+RouterFlow */ = {
+			isa = PBXGroup;
+			children = (
+				B5E107DB2F312F0900700E2A /* AuthRouterFlow.swift */,
+			);
+			path = "Auth+RouterFlow";
+			sourceTree = "<group>";
+		};
+		B5E107D82F312EEF00700E2A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5E107D92F312EFE00700E2A /* AuthModels.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B5E107DD2F312F2400700E2A /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B5E107DE2F312F3800700E2A /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		B5E107DE2F312F3800700E2A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5E107DF2F312F5800700E2A /* OnboardingVC.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BD2D57C92C1C6480003E76A4 = {
 			isa = PBXGroup;
 			children = (
@@ -213,12 +251,12 @@
 		BD2D57D42C1C6480003E76A4 /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				BDF84D2D2C63B27A0079E84A /* Delegates */,
 				CE090EAE2F2666C900B45930 /* Utils */,
 				CEE2112E2DA30E4F0062599E /* Extension */,
-				BDF84D2D2C63B27A0079E84A /* Delegates */,
 				CEE211202DA307660062599E /* Constant */,
 				CEE2111F2DA3075E0062599E /* Helper */,
-				CEE2111E2DA307570062599E /* Screens */,
+				CEE2111E2DA307570062599E /* Features */,
 				CEE211222DA307780062599E /* Storyboard */,
 				CEE211212DA307700062599E /* Resources */,
 				BD2D57E32C1C6482003E76A4 /* Info.plist */,
@@ -256,20 +294,13 @@
 		CE090EA62F26659600B45930 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				B5E107D82F312EEF00700E2A /* Model */,
+				B5E107D72F312EDC00700E2A /* Auth+RouterFlow */,
 				CE090EB72F26AFDE00B45930 /* Repository */,
-				CE090EAA2F2665B300B45930 /* Auth+Router+Flow */,
 				CE090EA92F2665A900B45930 /* ViewModel */,
 				CE090EA82F2665A000B45930 /* Views */,
-				CE090EA72F26659B00B45930 /* Model */,
 			);
 			path = Auth;
-			sourceTree = "<group>";
-		};
-		CE090EA72F26659B00B45930 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CE090EA82F2665A000B45930 /* Views */ = {
@@ -286,13 +317,6 @@
 				CE090EB52F26AD3000B45930 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		CE090EAA2F2665B300B45930 /* Auth+Router+Flow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Auth+Router+Flow";
 			sourceTree = "<group>";
 		};
 		CE090EAB2F2665CE00B45930 /* Services */ = {
@@ -344,15 +368,16 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		CEE2111E2DA307570062599E /* Screens */ = {
+		CEE2111E2DA307570062599E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				B5E107DD2F312F2400700E2A /* Onboarding */,
 				CE090EA62F26659600B45930 /* Auth */,
 				CEE211292DA309440062599E /* View */,
 				CEE211282DA3093D0062599E /* ViewModel */,
 				CEE211272DA309380062599E /* Model */,
 			);
-			path = Screens;
+			path = Features;
 			sourceTree = "<group>";
 		};
 		CEE2111F2DA3075E0062599E /* Helper */ = {
@@ -637,6 +662,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E107E02F312F5800700E2A /* OnboardingVC.swift in Sources */,
 				CEE211262DA308C90062599E /* APIConstant.swift in Sources */,
 				CE090EB22F2667E200B45930 /* Color+Extension.swift in Sources */,
 				CECCE79E2E6276E50042651B /* QuestionManager.swift in Sources */,
@@ -647,6 +673,8 @@
 				CE090F062F26B30400B45930 /* EmailAuthService.swift in Sources */,
 				CE090F072F26B30400B45930 /* AppleAuthService.swift in Sources */,
 				CE090F082F26B30400B45930 /* AuthHelper.swift in Sources */,
+				B5E107DC2F312F0900700E2A /* AuthRouterFlow.swift in Sources */,
+				B5E107DA2F312EFE00700E2A /* AuthModels.swift in Sources */,
 				BD2D57D62C1C6480003E76A4 /* AppDelegate.swift in Sources */,
 				CE090EB02F2666D100B45930 /* Utils.swift in Sources */,
 				CEE2112B2DA309690062599E /* questionModel.swift in Sources */,

@@ -6,7 +6,7 @@
 import UIKit
 import MBProgressHUD
 import Foundation
-extension UIViewController{
+extension UIViewController {
     func showHUD(progressLabel:String) {
         DispatchQueue.main.async {
             let progressHUD = MBProgressHUD.showAdded(to: self.view, animated: true)
