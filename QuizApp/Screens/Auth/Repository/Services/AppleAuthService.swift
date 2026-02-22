@@ -75,9 +75,9 @@ final class AppleAuthService: NSObject, AppleAuthServiceProtocol, ASAuthorizatio
         
         print("🟢 Apple ID Token received successfully")
         
-        let credential = OAuthProvider.credential(withProviderID: "apple.com",
-                                                 idToken: idTokenString,
-                                                 rawNonce: nonce)
+        let credential = OAuthProvider.appleCredential(withIDToken: idTokenString,
+                                                       rawNonce: nonce,
+                                                       fullName: appleIDCredential.fullName)
         
         Auth.auth().signIn(with: credential) { [weak self] authResult, error in
             if let error = error {
@@ -196,7 +196,8 @@ final class AppleAuthService_Simple: NSObject, AppleAuthServiceProtocol, ASAutho
     // MARK: - ASAuthorizationControllerPresentationContextProviding
     
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        guard let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }) else {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+              let window = windowScene.windows.first(where: { $0.isKeyWindow }) else {
             fatalError("No key window found")
         }
         return window

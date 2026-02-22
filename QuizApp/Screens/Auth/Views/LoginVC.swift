@@ -47,7 +47,7 @@ class LoginVC: UIViewController {
         
     }
     
-    @IBAction func didTapAppleLoginTap(_ sender: UIButon) {
+    @IBAction func didTapAppleLoginTap(_ sender: UIButton) {
         /// call signin apple 
         authViewModel.signInWithApple()
     }

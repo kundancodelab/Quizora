@@ -430,7 +430,7 @@ final class AuthViewModel: ObservableObject {
 }
 
 // MARK: - Error Types Extension
-extension Login_SignUpVM {
+extension AuthViewModel {
     enum AuthError: LocalizedError {
         case configurationError
         case invalidUserData

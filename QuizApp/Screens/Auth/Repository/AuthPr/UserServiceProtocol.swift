@@ -44,7 +44,7 @@ final class UserService: UserServiceProtocol {
     }
     
     func fetchUser(uid: String, completion: @escaping (Result<UserData, Error>) -> Void) {
-        databaseRef.child(uid).observeSingleEvent(of: .value) { snapshot in
+        databaseRef.child(uid).observeSingleEvent(of: .value) { snapshot, _ in
             guard let data = snapshot.value as? [String: Any] else {
                 completion(.failure(DatabaseError.userNotFound))
                 return

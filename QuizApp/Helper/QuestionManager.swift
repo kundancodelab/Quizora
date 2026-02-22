@@ -27,7 +27,7 @@ class APIManager {
     private init() {}
     
     func fetchQuestionsData(completion: @escaping handler) {
-        guard let url = URL(string:APIConstant.baseURL) else {
+        guard let url = URL(string:APIClient.baseURL) else {
             completion(.failure(.invalidURL))
             return
         }

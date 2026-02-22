@@ -17,4 +17,13 @@ extension String {
     var asciiCodes: [Int] {
         return self.compactMap { $0.asciiValue.map { Int($0) } }
     }
+    
+    var trimmed: String {
+        trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    var isValidEmail: Bool {
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        return NSPredicate(format: "SELF MATCHES %@", regex).evaluate(with: self)
+    }
 }

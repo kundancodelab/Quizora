@@ -1,0 +1,11 @@
+//
+//  Quizora-Dev.xcconfig
+//  QuizApp
+//
+//  Created by User on 22/02/26.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+
+BASE_URL = api-dev.quizora.com/api/v1
